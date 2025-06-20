@@ -24,30 +24,30 @@ import itemData from "../data/items";
 // }
 
 class App extends React.Component {
-	state = {
-		items: itemData,
-		isDarkMode: false,
-	};
+  state = {
+    items: itemData,
+    isDarkMode: false,
+  };
 
-	handleDarkModeClick = () => {
-		this.setState((previousState) => ({
-			isDarkMode: !previousState.isDarkMode,
-		}));
-	};
+  handleDarkModeClick = () => {
+    this.setState((previousState) => ({
+      isDarkMode: !previousState.isDarkMode,
+    }));
+  };
 
-	render() {
-		return (
-			<div className={"App " + (this.state.isDarkMode ? "dark" : "light")}>
-				<header>
-					<h2>Shopster</h2>
-					<button onClick={this.handleDarkModeClick}>
-						{this.state.isDarkMode ? "Dark" : "Light"} Mode
-					</button>
-				</header>
-				<ShoppingList items={this.state.items} />
-			</div>
-		);
-	}
+  render() {
+    return (
+      <div className={"App " + (this.state.isDarkMode ? "dark" : "light")}>
+        <header>
+          <h2>Shopster</h2>
+          <button onClick={this.handleDarkModeClick}>
+            {this.state.isDarkMode ? "Dark" : "Light"} Mode
+          </button>
+        </header>
+        <ShoppingList items={this.state.items} />
+      </div>
+    );
+  }
 }
 
 export default App;
