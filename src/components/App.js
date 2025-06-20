@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ShoppingList from "./ShoppingList";
 import itemData from "../data/items";
 
@@ -29,11 +29,11 @@ class App extends React.Component {
 		isDarkMode: false,
 	};
 
-	handleDarkModeClick = () =>{
+	handleDarkModeClick = () => {
 		this.setState((previousState) => ({
 			isDarkMode: !previousState.isDarkMode,
 		}));
-	}
+	};
 
 	render() {
 		return (
